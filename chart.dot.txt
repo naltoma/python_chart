@@ -1,0 +1,132 @@
+digraph python_programming_chart {
+	rankdir=LR;
+	
+	//分岐ノード
+	node [shape = rectangle ];
+	"Start"
+	"具体的に実現したい目的が既にある？" "課題例"
+	"プログラミング自体が初めて？" "取り敢えず動かしながら学びたい" "もう少し言語仕様を詳細に学びたい"
+	"機械学習" "中身も勉強したい（機械学習）" "取り敢えず動かしたい（機械学習）" "事例ベースで学びたい（機械学習）"
+	"IoTとか組み込み系"
+	"Webアプリ" "Django"
+	"データ収集（クローラ/スクレイピング）"
+	"ゲームアプリ" "PCアプリ" "スマートフォンアプリ"
+	"統計処理/データ分析" "ベクトル・行列演算" "データ分析" "応用例（データ分析活用）"
+	"広い意味での問題解決"
+	"自然言語処理"
+
+	//リファレンスノード
+	node [shape = polygon, sides=6 fontcolor=blue ];
+	"Code School" [ URL="https://www.codeschool.com/learn/python" ];
+	"paiza" [ URL="https://paiza.jp/works/python3/primer" ];
+	"progate" [ URL="https://prog-8.com" ];
+	"初めてのPython 第3版" [ URL="https://www.oreilly.co.jp/books/9784873113937/" ];
+	"Learning Python, 5th Edition" [ URL="http://shop.oreilly.com/product/0636920028154.do" ];
+	"Coursera" [ URL="https://www.coursera.org/courses?query=python" ];
+	"google keywords: python3 プログラミング 本" [ URL="https://goo.gl/Xj40mU" ];
+	"みんなのPython Webアプリ編 - 復習!! Python" [ URL="http://coreblog.org/ats/stuff/minpy_web/02/index.html" ];
+	"The Python Tutorial" [ URL="https://docs.python.org/3/tutorial/" ];
+	"ゼロから作るDeep Learning" [ URL="https://www.oreilly.co.jp/books/9784873117584/" ];
+	"Python Machine Learning" [ URL="https://github.com/rasbt/python-machine-learning-book" ];
+	"scikit-learn: Machine Learning in Python" [ URL="http://scikit-learn.org/stable/" ];
+	"機械学習 はじめよう" [ URL="http://gihyo.jp/dev/serial/01/machine-learning" ];
+	"機械学習の Python との出会い" [ URL="http://www.kamishima.net/mlmpyja/" ];
+	"scikit-learn: Quick Start" [ URL="http://scikit-learn.org/stable/documentation.html" ];
+	"データサイエンティスト養成読本　機械学習入門編" [ URL="https://www.amazon.co.jp/データサイエンティスト養成読本-機械学習入門編-比戸将平-ebook/dp/B0152OV4VW/" ];
+	"Raspberry Piクックブック" [ URL="https://www.oreilly.co.jp/books/9784873116907/" ];
+	"PythonでWeb開発入門 みんなのPython Webアプリ編 HTML版" [ URL="http://coreblog.org/ats/stuff/minpy_web/" ];
+	"Getting started with Django" [ URL="https://www.djangoproject.com/start/" ];
+	"Django: Web Development with Python" [ URL="http://shop.oreilly.com/product/9781787121386.do" ];
+	"PythonによるWebスクレイピング" [ URL="https://www.oreilly.co.jp/books/9784873117614/" ];
+	"Pythonでゲーム作りますが何か？" [ URL="http://aidiary.hatenablog.com/entry/20080507/1269694935" ];
+	"Pygame" [ URL="http://www.pygame.org/news.html" ];
+	"Pythonista 3" [ URL="http://omz-software.com/pythonista/" ];
+	"Numpy: Quickstart tutorial" [ URL="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html" ];
+	"10 Minutes to pandas" [ URL="http://pandas.pydata.org/pandas-docs/stable/10min.html" ];
+	"Pandas_Cheat_Sheet.pdf" [ URL="https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf" ];
+	"Pythonによるデータ分析入門 ――NumPy、pandasを使ったデータ処理" [ URL="https://www.oreilly.co.jp/books/9784873116556/" ];
+	"集合知プログラミング" [ URL="https://www.amazon.co.jp/dp/4873113644" ];
+	"Introduction to Computation and Programming Using Python, Revised And Expanded Edition" [ URL="https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0" ];
+	"入門 自然言語処理" [ URL="https://www.oreilly.co.jp/books/9784873114705/" ];
+	"CodeIQ" [ URL="https://codeiq.jp" ];
+	"言語処理100本ノック 2015" [ URL="http://www.cl.ecei.tohoku.ac.jp/nlp100/" ];
+	"プログラミングコンテスト" [ URL="http://cocodrips.hateblo.jp/entry/2015/10/11/114212" ];
+	"CoodingBat" [ URL="http://codingbat.com/python" ];
+	
+	//目的不透明
+	"Start" -> "具体的に実現したい目的が既にある？"
+	"具体的に実現したい目的が既にある？" -> "プログラミング自体が初めて？" [ label = "特に決まっていない" ];
+	"プログラミング自体が初めて？" -> "取り敢えず動かしながら学びたい" [ label = "Yes1（環境構築とか考えたくない）" ];
+	"取り敢えず動かしながら学びたい" -> "Code School"
+	"取り敢えず動かしながら学びたい" -> "paiza"
+	"取り敢えず動かしながら学びたい" -> "progate"
+	"プログラミング自体が初めて？" -> "もう少し言語仕様を詳細に学びたい" [ label = "Yes2（少しその先へ）" ];
+	"もう少し言語仕様を詳細に学びたい" -> "初めてのPython 第3版"
+	"もう少し言語仕様を詳細に学びたい" -> "Learning Python, 5th Edition"
+	"もう少し言語仕様を詳細に学びたい" -> "Coursera"
+	"プログラミング自体が初めて？" -> "google keywords: python3 プログラミング 本" [ label = "Yes3（他には？）" ];
+	"プログラミング自体が初めて？" -> "みんなのPython Webアプリ編 - 復習!! Python" [ label = "No1（他言語でFizzBuzzレベルならやったことある）" ];
+	"プログラミング自体が初めて？" -> "The Python Tutorial" [ label = "No2（他言語で入門書ぐらいは通したことがある）" ];
+	"プログラミング自体が初めて？" -> "課題例" [ label = "No3（課題を探したい）" ];
+	"課題例" -> "CodeIQ"
+	"課題例" -> "言語処理100本ノック 2015"
+	"課題例" -> "プログラミングコンテスト"
+	"課題例" -> "CoodingBat"
+	
+	//機械学習
+	"具体的に実現したい目的が既にある？" -> "機械学習"
+	"機械学習" -> "中身も勉強したい（機械学習）"
+	"中身も勉強したい（機械学習）" -> "ゼロから作るDeep Learning"
+	"中身も勉強したい（機械学習）" -> "Python Machine Learning"
+	"中身も勉強したい（機械学習）" -> "scikit-learn: Machine Learning in Python"
+	"中身も勉強したい（機械学習）" -> "機械学習 はじめよう"
+	"中身も勉強したい（機械学習）" -> "機械学習の Python との出会い"
+	"機械学習" -> "取り敢えず動かしたい（機械学習）"
+	"取り敢えず動かしたい（機械学習）" -> "scikit-learn: Quick Start"
+	"機械学習" -> "事例ベースで学びたい（機械学習）"
+	"事例ベースで学びたい（機械学習）" -> "データサイエンティスト養成読本　機械学習入門編"
+	
+	//組み込み系
+	"具体的に実現したい目的が既にある？" -> "IoTとか組み込み系"
+	"IoTとか組み込み系" -> "Raspberry Piクックブック"
+	
+	//Webアプリ
+	"具体的に実現したい目的が既にある？" -> "Webアプリ"
+	"Webアプリ" -> "PythonでWeb開発入門 みんなのPython Webアプリ編 HTML版"
+	"Webアプリ" -> "Django"
+	"Django" -> "Getting started with Django"
+	"Django" -> "Django: Web Development with Python"
+	
+	//データ収集
+	"具体的に実現したい目的が既にある？" -> "データ収集（クローラ/スクレイピング）"
+	"データ収集（クローラ/スクレイピング）" -> "PythonによるWebスクレイピング"
+	
+	//ゲームアプリ
+	"具体的に実現したい目的が既にある？" -> "ゲームアプリ"
+	"ゲームアプリ" -> "PCアプリ"
+	"PCアプリ" -> "Pythonでゲーム作りますが何か？"
+	"PCアプリ" -> "Pygame"
+	"ゲームアプリ" -> "スマートフォンアプリ"
+	"スマートフォンアプリ" -> "（別言語を選んだほうが、、）"
+	"スマートフォンアプリ" -> "Pythonista 3"
+	
+	//データ分析
+	"具体的に実現したい目的が既にある？" -> "統計処理/データ分析"
+	"統計処理/データ分析" -> "ベクトル・行列演算"
+	"ベクトル・行列演算" -> "Numpy: Quickstart tutorial"
+	"統計処理/データ分析" -> "データ分析"
+	"データ分析" -> "10 Minutes to pandas"
+	"データ分析" -> "Pandas_Cheat_Sheet.pdf"
+	"データ分析" -> "Pythonによるデータ分析入門 ――NumPy、pandasを使ったデータ処理"
+	"統計処理/データ分析" -> "応用例（データ分析活用）"
+	"応用例（データ分析活用）" -> "集合知プログラミング"
+	
+	//問題解決全般
+	"具体的に実現したい目的が既にある？" -> "広い意味での問題解決"
+	"広い意味での問題解決" -> "Introduction to Computation and Programming Using Python, Revised And Expanded Edition"
+	
+	//自然言語処理
+	"具体的に実現したい目的が既にある？" -> "自然言語処理"
+	"自然言語処理" -> "入門 自然言語処理"
+
+}
