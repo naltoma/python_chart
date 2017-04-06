@@ -52,6 +52,8 @@ digraph python_programming_chart {
 	"言語処理100本ノック 2015" [ URL="http://www.cl.ecei.tohoku.ac.jp/nlp100/" ];
 	"プログラミングコンテスト" [ URL="http://cocodrips.hateblo.jp/entry/2015/10/11/114212" ];
 	"CoodingBat" [ URL="http://codingbat.com/python" ];
+	"Runestone Interactive" [ URL="http://runestoneinteractive.org/library.html" ];
+	"Everyday Python" [ URL="http://everydaypython.org/" ];
 	
 	//目的不透明
 	"Start" -> "具体的に実現したい目的が既にある？"
@@ -60,6 +62,7 @@ digraph python_programming_chart {
 	"取り敢えず動かしながら学びたい" -> "Code School"
 	"取り敢えず動かしながら学びたい" -> "paiza"
 	"取り敢えず動かしながら学びたい" -> "progate"
+	"取り敢えず動かしながら学びたい" -> "Everyday Python"
 	"プログラミング自体が初めて？" -> "もう少し言語仕様を詳細に学びたい" [ label = "Yes2（少しその先へ）" ];
 	"もう少し言語仕様を詳細に学びたい" -> "初めてのPython 第3版"
 	"もう少し言語仕様を詳細に学びたい" -> "Learning Python, 5th Edition"
@@ -124,6 +127,7 @@ digraph python_programming_chart {
 	//問題解決全般
 	"具体的に実現したい目的が既にある？" -> "広い意味での問題解決"
 	"広い意味での問題解決" -> "Introduction to Computation and Programming Using Python, Revised And Expanded Edition"
+	"広い意味での問題解決" -> "Runestone Interactive"
 	
 	//自然言語処理
 	"具体的に実現したい目的が既にある？" -> "自然言語処理"
