@@ -6,7 +6,7 @@ digraph python_programming_chart {
 	"Start"
 	"具体的に実現したい目的が既にある？" "課題例"
 	"プログラミング自体が初めて？" "取り敢えず動かしながら学びたい" "もう少し言語仕様を詳細に学びたい"
-	"機械学習" "中身も勉強したい（機械学習）" "取り敢えず動かしたい（機械学習）" "事例ベースで学びたい（機械学習）"
+	"機械学習" "中身も勉強したい（機械学習）" "機械学習 初学者向け" "機械学習 難易度高め" "取り敢えず動かしたい（機械学習）" "事例ベースで学びたい（機械学習）"
 	"IoTとか組み込み系"
 	"Webアプリ" "Django"
 	"データ収集（クローラ/スクレイピング）"
@@ -28,7 +28,7 @@ digraph python_programming_chart {
 	"The Python Tutorial" [ URL="https://docs.python.org/3/tutorial/" ];
 	"ゼロから作るDeep Learning" [ URL="https://www.oreilly.co.jp/books/9784873117584/" ];
 	"Python Machine Learning" [ URL="https://github.com/rasbt/python-machine-learning-book" ];
-	"scikit-learn: Machine Learning in Python" [ URL="http://scikit-learn.org/stable/" ];
+	//"scikit-learn: Machine Learning in Python" [ URL="http://scikit-learn.org/stable/" ];
 	"機械学習 はじめよう" [ URL="http://gihyo.jp/dev/serial/01/machine-learning" ];
 	"機械学習の Python との出会い" [ URL="http://www.kamishima.net/mlmpyja/" ];
 	"scikit-learn: Quick Start" [ URL="http://scikit-learn.org/stable/documentation.html" ];
@@ -54,6 +54,7 @@ digraph python_programming_chart {
 	"CoodingBat" [ URL="http://codingbat.com/python" ];
 	"Runestone Interactive" [ URL="http://runestoneinteractive.org/library.html" ];
 	"Everyday Python" [ URL="http://everydaypython.org/" ];
+	"Pythonで動かして学ぶ！ あたらしい機械学習の教科書" [ URL="https://www.shoeisha.co.jp/book/detail/9784798144986" ];
 	
 	//目的不透明
 	"Start" -> "具体的に実現したい目的が既にある？"
@@ -79,11 +80,13 @@ digraph python_programming_chart {
 	//機械学習
 	"具体的に実現したい目的が既にある？" -> "機械学習"
 	"機械学習" -> "中身も勉強したい（機械学習）"
-	"中身も勉強したい（機械学習）" -> "ゼロから作るDeep Learning"
-	"中身も勉強したい（機械学習）" -> "Python Machine Learning"
-	"中身も勉強したい（機械学習）" -> "scikit-learn: Machine Learning in Python"
-	"中身も勉強したい（機械学習）" -> "機械学習 はじめよう"
-	"中身も勉強したい（機械学習）" -> "機械学習の Python との出会い"
+	"中身も勉強したい（機械学習）" -> "機械学習 初学者向け"
+	"中身も勉強したい（機械学習）" -> "機械学習 難易度高め"
+	"機械学習 初学者向け" -> "Pythonで動かして学ぶ！ あたらしい機械学習の教科書"
+	"機械学習 初学者向け" -> "ゼロから作るDeep Learning"
+	"機械学習 難易度高め" -> "Python Machine Learning"
+	"機械学習 初学者向け" -> "機械学習 はじめよう"
+	"機械学習 難易度高め" -> "機械学習の Python との出会い"
 	"機械学習" -> "取り敢えず動かしたい（機械学習）"
 	"取り敢えず動かしたい（機械学習）" -> "scikit-learn: Quick Start"
 	"機械学習" -> "事例ベースで学びたい（機械学習）"
